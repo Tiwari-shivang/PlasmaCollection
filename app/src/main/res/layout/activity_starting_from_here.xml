@@ -14,6 +14,10 @@
         app:cardCornerRadius="20dp"
         android:id="@+id/HospitalCard"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
         >
 
         <RelativeLayout
@@ -45,6 +49,7 @@
         app:cardCornerRadius="20dp"
         android:id="@+id/View"
         android:layout_above="@id/HospitalCard"
+        android:layout_margin="10dp"
         >
 
         <RelativeLayout
@@ -74,6 +79,7 @@
         app:cardCornerRadius="20dp"
         android:id="@+id/DonationCard"
         android:layout_above="@id/View"
+        android:layout_margin="10dp"
         >
 
         <RelativeLayout
@@ -98,6 +104,187 @@
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/covidIndiaText"
+        style="@style/FocusedText"
+        android:text="@string/covid_19_updates_india"
+        android:layout_margin="10dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/covidIndiaText"
+        android:layout_margin="10dp"
+        android:id="@+id/covidUpdatesIndia"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/Date"
+                style="@style/UnFocusedText"
+                android:layout_marginBottom="10dp"
+                android:text="@string/_18_oct_2022" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_circle_24"
+                android:contentDescription="@string/activecaseindicator"
+                android:layout_below="@id/Date"
+                android:layout_marginStart="10dp"
+                android:id="@+id/activeIndicator"/>
+            <TextView
+                style="@style/UnFocusedText"
+                android:text="New cases"
+                android:layout_below="@id/Date"
+                android:layout_toEndOf="@id/activeIndicator"
+                android:id="@+id/activeText"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_square_24"
+                android:layout_below="@id/Date"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/activeText"
+                android:contentDescription="@string/deathindicator"
+                android:id="@+id/deathIndicator"/>
+            <TextView
+                style="@style/UnFocusedText"
+                android:text="Deaths"
+                android:layout_below="@id/Date"
+                android:layout_toEndOf="@id/deathIndicator"
+                />
+
+            <TextView
+                android:id="@+id/last24hrsCases"
+                style="@style/mediumText"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/india_last_24_hours"
+                android:textStyle="bold"
+                android:layout_below="@id/activeIndicator"/>
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_below="@id/last24hrsCases"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:progressDrawable="@drawable/custom_made_shivang"
+                android:id="@+id/countryProgress"
+                />
+            <TextView
+                style="@style/mediumText"
+                android:text="@string/_15000"
+                android:layout_below="@id/countryProgress"
+                android:layout_marginStart="10dp"
+                android:id="@+id/numberOfCases"
+                />
+
+            <ProgressBar
+                android:id="@+id/countryProgressBarDeaths"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/numberOfCases"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:progressDrawable="@drawable/custom_made_shivang_black" />
+            <TextView
+                style="@style/mediumText"
+                android:text="@string/_15000Death"
+                android:layout_below="@id/countryProgressBarDeaths"
+                android:layout_marginStart="10dp"
+                android:id="@+id/numberOfDeaths"
+                />
+
+            <!-- Separator _________________________________________________________-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/numberOfDeaths"
+                android:background="#C6C6C6"
+                android:layout_margin="10dp"
+                android:id="@+id/separator"/>
+            <!-- Now for states ______________________________________________________-->
+
+            <TextView
+                android:id="@+id/state24hrs"
+                style="@style/mediumText"
+                android:layout_below="@id/separator"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/delhi"
+                android:textStyle="bold" />
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_below="@id/state24hrs"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:progressDrawable="@drawable/custom_made_shivang"
+                android:id="@+id/stateProgressBar"
+                />
+            <TextView
+                style="@style/mediumText"
+                android:text="1500"
+                android:layout_marginStart="10dp"
+                android:layout_below="@id/stateProgressBar"
+                android:id="@+id/casesInState"
+                />
+
+            <ProgressBar
+                android:id="@+id/stateProgressBarDeath"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/casesInState"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:progressDrawable="@drawable/custom_made_shivang_black" />
+            <TextView
+                style="@style/mediumText"
+                android:text="1500"
+                android:layout_marginStart="10dp"
+                android:layout_below="@id/stateProgressBarDeath"
+                android:id="@+id/DeathInState"
+                />
+            <TextView
+                style="@style/UnFocusedText"
+                android:text="Updates are till today"
+                android:layout_below="@id/DeathInState"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/covidIndiaText"
+            android:layout_margin="10dp"
+            android:id="@+id/ChooseState">
+
+
+
+        </androidx.cardview.widget.CardView>
+
 
 
 </RelativeLayout>

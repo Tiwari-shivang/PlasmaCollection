@@ -6,4 +6,12 @@
     <string name="find_nearby_hospital">Find Nearby Hospital</string>
     <string name="view_requests">View/Generate Request</string>
     <string name="become_a_donor_now">Become a Donor Now</string>
+    <string name="covid_19_updates_india">COVID 19 Updates India</string>
+    <string name="_18_oct_2022">18 Oct 2022</string>
+    <string name="activecaseindicator">ActiveCaseIndicator</string>
+    <string name="deathindicator">DeathIndicator</string>
+    <string name="india_last_24_hours">India Last 24 hours</string>
+    <string name="_15000">15000</string>
+    <string name="_15000Death">15000</string>
+    <string name="delhi">Delhi</string>
 </resources>
