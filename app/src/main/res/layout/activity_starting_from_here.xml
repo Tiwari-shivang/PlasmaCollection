@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".startingFromHere"
+    android:background="#DDDCDC">
+
+    <androidx.cardview.widget.CardView
+        style="@style/OptionsInCardViews"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="20dp"
+        android:id="@+id/HospitalCard"
+        android:layout_alignParentBottom="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                style="@style/cardViewOptionImages"
+                android:src="@drawable/ic_baseline_location_on_24"
+                android:id="@+id/Location"
+                android:contentDescription="@string/locationlogoimg"
+                />
+
+            <TextView
+                style="@style/FocusedText"
+                android:text="@string/find_nearby_hospital"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        style="@style/OptionsInCardViews"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="20dp"
+        android:id="@+id/View"
+        android:layout_above="@id/HospitalCard"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                style="@style/cardViewOptionImages"
+                android:src="@drawable/ic_baseline_remove_red_eye_24"
+                android:id="@+id/ViewRequest"
+                android:contentDescription="@string/locationlogoimg"
+                />
+
+            <TextView
+                style="@style/FocusedText"
+                android:layout_centerInParent="true"
+                android:text="@string/view_requests" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        style="@style/OptionsInCardViews"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="20dp"
+        android:id="@+id/DonationCard"
+        android:layout_above="@id/View"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                style="@style/cardViewOptionImages"
+                android:src="@drawable/ic_baseline_medical_services_24"
+                android:id="@+id/DonateMy"
+                android:contentDescription="@string/locationlogoimg"
+                />
+
+            <TextView
+                style="@style/FocusedText"
+                android:text="@string/become_a_donor_now"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

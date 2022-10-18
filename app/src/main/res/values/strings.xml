@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PlasmaCollection</string>
+    <string name="nameSecondHalf">COLLECTION</string>
+    <string name="nameFirstHalf">PLASMA</string>
+    <string name="locationlogoimg">locationLogoImg</string>
+    <string name="find_nearby_hospital">Find Nearby Hospital</string>
+    <string name="view_requests">View/Generate Request</string>
+    <string name="become_a_donor_now">Become a Donor Now</string>
 </resources>
