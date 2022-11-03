@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HospitalNearby">
+
+    <androidx.cardview.widget.CardView
+        style="@style/OptionsInCardViews"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        app:cardBackgroundColor="#FDB2B2"
+        android:id="@+id/HospitalNearbyLoc"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            >
+
+            <ImageView
+                style="@style/cardViewOptionImages"
+                android:src="@drawable/ic_baseline_location_on_24"
+                android:contentDescription="@string/locationlogoimg"
+                android:id="@+id/locationLogo"
+                />
+            <TextView
+                style="@style/FocusedText"
+                android:text="@string/find_nearby_hospital"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/locationLogo"
+                android:layout_marginBottom="20dp"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

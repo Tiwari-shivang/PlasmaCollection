@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Recipient_Card"
+        android:layout_margin="7dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#F9E3FD"
+         >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/become_a_donor_now"
+                android:src="@drawable/ic_baseline_medical_services_24" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:id="@+id/nameOfRecipient"
+                >
+
+                <TextView
+                    style="@style/mediumText"
+                    android:text="@string/name"
+                    android:id="@+id/requestName"
+                    />
+                <TextView
+                    style="@style/mediumText"
+                    android:text="@string/Name_of_recipient"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:id="@+id/nameOfPatient"
+                android:layout_below="@id/nameOfRecipient"
+                >
+
+                <TextView
+                    style="@style/mediumText"
+                    android:text="@string/patient_name"
+                    android:id="@+id/PatientName"
+                    />
+                <TextView
+                    style="@style/mediumText"
+                    android:text="@string/patientForPlasma"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:id="@+id/PhoneOfRecipient"
+                android:layout_below="@id/nameOfPatient"
+                >
+
+                <TextView
+                    style="@style/mediumText"
+                    android:text="@string/phone_number"
+                    android:id="@+id/PhoneNumber"
+                    />
+                <TextView
+                    style="@style/mediumText"
+                    android:text="@string/Primary_key_phone"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:id="@+id/Hospital"
+                android:layout_below="@id/PhoneOfRecipient"
+                >
+
+                <TextView
+                    style="@style/mediumText"
+                    android:text="@string/hospital_address"
+                    android:id="@+id/HospitalAddress"
+                    />
+                <TextView
+                    style="@style/mediumText"
+                    android:text="@string/HospitalName"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Recipient_Card"
+        android:layout_margin="7dp"
+        app:cardElevation="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:id="@+id/nameOfRecipient"
+                >
+
+                <TextView
+                    style="@style/mediumText"
+                    android:text="@string/name"
+                    android:id="@+id/requestName"
+                    />
+                <TextView
+                    style="@style/mediumText"
+                    android:text="@string/Name_of_recipient"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:id="@+id/PhoneOfRecipient"
+                android:layout_below="@id/nameOfRecipient"
+                >
+
+                <TextView
+                    style="@style/mediumText"
+                    android:text="@string/phone_number"
+                    android:id="@+id/PhoneNumber"
+                    />
+                <TextView
+                    style="@style/mediumText"
+                    android:text="@string/Primary_key_phone"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:id="@+id/AgeOfDonor"
+                android:layout_below="@id/PhoneOfRecipient"
+                >
+
+                <TextView
+                    style="@style/mediumText"
+                    android:text="@string/age"
+                    android:id="@+id/HouseAddress"
+                    />
+                <TextView
+                    style="@style/mediumText"
+                    android:text="@string/Donor_age"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

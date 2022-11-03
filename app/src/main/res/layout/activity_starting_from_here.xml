@@ -5,286 +5,308 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".startingFromHere"
-    android:background="#DDDCDC">
-
-    <androidx.cardview.widget.CardView
-        style="@style/OptionsInCardViews"
-        app:cardElevation="20dp"
-        app:cardCornerRadius="20dp"
-        android:id="@+id/HospitalCard"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp"
-        >
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
-
-            <ImageView
-                style="@style/cardViewOptionImages"
-                android:src="@drawable/ic_baseline_location_on_24"
-                android:id="@+id/Location"
-                android:contentDescription="@string/locationlogoimg"
-                />
-
-            <TextView
-                style="@style/FocusedText"
-                android:text="@string/find_nearby_hospital"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                />
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        style="@style/OptionsInCardViews"
-        app:cardElevation="20dp"
-        app:cardCornerRadius="20dp"
-        android:id="@+id/View"
-        android:layout_above="@id/HospitalCard"
-        android:layout_margin="10dp"
-        >
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
-
-            <ImageView
-                style="@style/cardViewOptionImages"
-                android:src="@drawable/ic_baseline_remove_red_eye_24"
-                android:id="@+id/ViewRequest"
-                android:contentDescription="@string/locationlogoimg"
-                />
-
-            <TextView
-                style="@style/FocusedText"
-                android:layout_centerInParent="true"
-                android:text="@string/view_requests" />
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        style="@style/OptionsInCardViews"
-        app:cardElevation="20dp"
-        app:cardCornerRadius="20dp"
-        android:id="@+id/DonationCard"
-        android:layout_above="@id/View"
-        android:layout_margin="10dp"
-        >
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
-
-            <ImageView
-                style="@style/cardViewOptionImages"
-                android:src="@drawable/ic_baseline_medical_services_24"
-                android:id="@+id/DonateMy"
-                android:contentDescription="@string/locationlogoimg"
-                />
-
-            <TextView
-                style="@style/FocusedText"
-                android:text="@string/become_a_donor_now"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                />
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/covidIndiaText"
-        style="@style/FocusedText"
-        android:text="@string/covid_19_updates_india"
-        android:layout_margin="10dp"/>
+    tools:context=".startingFromHere">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/covidIndiaText"
-        android:layout_margin="10dp"
-        android:id="@+id/covidUpdatesIndia"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="10dp">
+        android:id="@+id/heading"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#E0F4FD"
+        >
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="visible"
+            android:orientation="vertical"
             android:padding="10dp">
 
             <TextView
-                android:id="@+id/Date"
-                style="@style/UnFocusedText"
-                android:layout_marginBottom="10dp"
-                android:text="@string/_18_oct_2022" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_circle_24"
-                android:contentDescription="@string/activecaseindicator"
-                android:layout_below="@id/Date"
-                android:layout_marginStart="10dp"
-                android:id="@+id/activeIndicator"/>
-            <TextView
-                style="@style/UnFocusedText"
-                android:text="New cases"
-                android:layout_below="@id/Date"
-                android:layout_toEndOf="@id/activeIndicator"
-                android:id="@+id/activeText"
-                />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_square_24"
-                android:layout_below="@id/Date"
-                android:layout_marginStart="10dp"
-                android:layout_toEndOf="@id/activeText"
-                android:contentDescription="@string/deathindicator"
-                android:id="@+id/deathIndicator"/>
-            <TextView
-                style="@style/UnFocusedText"
-                android:text="Deaths"
-                android:layout_below="@id/Date"
-                android:layout_toEndOf="@id/deathIndicator"
-                />
-
-            <TextView
-                android:id="@+id/last24hrsCases"
-                style="@style/mediumText"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:text="@string/india_last_24_hours"
-                android:textStyle="bold"
-                android:layout_below="@id/activeIndicator"/>
-            <ProgressBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_below="@id/last24hrsCases"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:progressDrawable="@drawable/custom_made_shivang"
-                android:id="@+id/countryProgress"
-                />
-            <TextView
-                style="@style/mediumText"
-                android:text="@string/_15000"
-                android:layout_below="@id/countryProgress"
-                android:layout_marginStart="10dp"
-                android:id="@+id/numberOfCases"
-                />
-
-            <ProgressBar
-                android:id="@+id/countryProgressBarDeaths"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/numberOfCases"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:progressDrawable="@drawable/custom_made_shivang_black" />
-            <TextView
-                style="@style/mediumText"
-                android:text="@string/_15000Death"
-                android:layout_below="@id/countryProgressBarDeaths"
-                android:layout_marginStart="10dp"
-                android:id="@+id/numberOfDeaths"
-                />
-
-            <!-- Separator _________________________________________________________-->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_below="@id/numberOfDeaths"
-                android:background="#C6C6C6"
-                android:layout_margin="10dp"
-                android:id="@+id/separator"/>
-            <!-- Now for states ______________________________________________________-->
-
-            <TextView
-                android:id="@+id/state24hrs"
-                style="@style/mediumText"
-                android:layout_below="@id/separator"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:text="@string/delhi"
-                android:textStyle="bold" />
-            <ProgressBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_below="@id/state24hrs"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
-                android:progressDrawable="@drawable/custom_made_shivang"
-                android:id="@+id/stateProgressBar"
-                />
-            <TextView
-                style="@style/mediumText"
-                android:text="1500"
-                android:layout_marginStart="10dp"
-                android:layout_below="@id/stateProgressBar"
-                android:id="@+id/casesInState"
-                />
-
-            <ProgressBar
-                android:id="@+id/stateProgressBarDeath"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/casesInState"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:progressDrawable="@drawable/custom_made_shivang_black" />
-            <TextView
-                style="@style/mediumText"
-                android:text="1500"
-                android:layout_marginStart="10dp"
-                android:layout_below="@id/stateProgressBarDeath"
-                android:id="@+id/DeathInState"
+                style="@style/headingText"
+                android:text="@string/app_name"
+                android:textColor="#03A9F4"
                 />
             <TextView
                 style="@style/UnFocusedText"
-                android:text="Updates are till today"
-                android:layout_below="@id/DeathInState"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="10dp"
+                android:text="@string/designed_by_shivang_tiwari"
                 />
-        </RelativeLayout>
+
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
+    <TextView
+        android:id="@+id/indiaHeading"
+        style="@style/mediumText"
+        android:layout_below="@id/heading"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/covid_19_updates_india"
+        android:textColor="#03A9F4"/>
+
+    <TextView
+        android:id="@+id/newCaseHeading"
+        style="@style/FocusedText"
+        android:layout_below="@id/indiaHeading"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/new_cases"
+        android:textColor="#FB5151"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/custom_made_shivang"
+        android:id="@+id/countryProgress"
+        android:layout_below="@id/newCaseHeading"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="10dp"
+        />
+
+    <TextView
+        android:id="@+id/NumberOfCasesDigits"
+        style="@style/mediumText"
+        android:layout_below="@id/countryProgress"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="#FB5151"
+        android:layout_marginBottom="10dp"
+        android:text="@string/casesCountryDigit" />
+
+    <!--________________________Deaths_________________________________________-->
+
+    <TextView
+        android:id="@+id/DeathsHeading"
+        style="@style/FocusedText"
+        android:layout_below="@id/NumberOfCasesDigits"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"
+        android:text="@string/deaths" />
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/custom_made_shivang_black"
+        android:id="@+id/countryProgressBarDeaths"
+        android:layout_below="@id/DeathsHeading"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="10dp"
+        />
+
+    <TextView
+        style="@style/mediumText"
+        android:layout_below="@id/countryProgressBarDeaths"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:text="@string/casesCountryDigit"
+        android:id="@+id/NumberOfDeathsDigits"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/NumberOfDeathsDigits"
+        android:layout_margin="5dp"
+        android:background="#BAB9B9"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/NumberOfDeathsDigits"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/Some_Services"
+            style="@style/FocusedText"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="State Update" />
+
         <androidx.cardview.widget.CardView
+            android:id="@+id/stateCasesCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/covidIndiaText"
+            android:layout_below="@id/Some_Services"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#E0F4FD"
+            android:layout_margin="5dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/state_description"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/close_window"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_baseline_cancel_24"
+                    android:contentDescription="@string/cancel"/>
+
+                <TextView
+                    android:id="@+id/State_Name"
+                    style="@style/FocusedText"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/delhi"
+                    android:textColor="#03A9F4"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/Partition"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_below="@id/State_Name"
+                    android:background="#BAB9B9"
+                    />
+
+                <TextView
+                    android:id="@+id/newCaseHeadingState"
+                    style="@style/mediumText"
+                    android:layout_below="@id/Partition"
+                    android:text="@string/new_cases"
+                    android:textStyle="bold"
+                    android:textColor="#FB5151" />
+
+                <ProgressBar
+                    android:id="@+id/StateProgress"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/newCaseHeadingState"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:progressDrawable="@drawable/custom_made_shivang" />
+
+                <TextView
+                    android:id="@+id/NumberOfCasesStateDigits"
+                    style="@style/mediumText"
+                    android:layout_below="@id/StateProgress"
+                    android:text="@string/casesCountryDigit"
+                    android:textColor="#FB5151"/>
+
+                <!--________________________Deaths_________________________________________-->
+
+                <TextView
+                    android:id="@+id/DeathsHeadingState"
+                    style="@style/FocusedText"
+                    android:layout_below="@id/NumberOfCasesStateDigits"
+                    android:text="@string/deaths"
+                    android:textColor="@color/black"/>
+
+                <ProgressBar
+                    android:id="@+id/StateProgressBarDeaths"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/DeathsHeadingState"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:progressDrawable="@drawable/custom_made_shivang_black" />
+
+                <TextView
+                    android:id="@+id/NumberOfDeathsDigitsState"
+                    style="@style/mediumText"
+                    android:layout_below="@id/StateProgressBarDeaths"
+                    android:text="@string/casesCountryDigit"
+                    android:textColor="@color/black"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/NumberOfDeathsDigitsState"
+                    android:text="Choose State"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_custom"
+                    android:id="@+id/choose_states"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            app:cardCornerRadius="20dp"
+            android:visibility="gone"
+            android:id="@+id/states_list"
             android:layout_margin="10dp"
-            android:id="@+id/ChooseState">
+            >
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                >
 
+                <TextView
+                    style="@style/FocusedText"
+                    android:text="Choose state"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/choose_state_label"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/all_states_list"
+                    android:layout_below="@id/choose_state_label"
+                    />
+
+            </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/SlideToServices"
+            android:visibility="gone"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="View States"
+            android:textSize="11sp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:id="@+id/Open_window"
+            android:background="@drawable/button_custom"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
 
 
 </RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BecomeDonor">
+
+    <androidx.cardview.widget.CardView
+        style="@style/OptionsInCardViews"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#E2FAC7"
+        android:id="@+id/becomeADonorCard"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            >
+
+            <ImageView
+                style="@style/cardViewOptionImages"
+                android:src="@drawable/ic_baseline_medical_services_24"
+                android:id="@+id/becomeADonor"
+                android:contentDescription="@string/become_a_donor_now"/>
+
+            <TextView
+                style="@style/FocusedText"
+                android:text="@string/become_a_donor_now"
+                android:layout_below="@id/becomeADonor"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
